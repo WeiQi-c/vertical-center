@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    .box {
+      height: 100px;
+      border: 1px solid #000;
+      margin: 30px 0;
+    }
+    .item {
+      background-color: #ccc;
+    }
+    /* 行内元素 line-height = height */
+    .box-1 {
+      text-align: center;
+      line-height: 100px;
+    }
+
+    /* absolute + margin */
+    .box-2 {
+      position: relative;
+    }
+    .box-2 .item {
+      width: 200px;
+      height: 50px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -25px;
+      margin-left: -100px;
+      /* 计算属性 */
+      /* top: calc(50% - 25px);
+      left: calc(50% - 100px); */
+    }
+
+    /* absolute + transform */
+    .box-3 {
+      position: relative;
+    }
+    .box-3 .item {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* absolute + margin: auto */
+    .box-4 {
+      position: relative;
+    }
+    .box-4 .item {
+      width: 200px;
+      height: 50px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    /* flex布局 */
+    .box-5 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box-5 .item {
+      width: 200px;
+      height: 50px;
+    }
+
+    /* grid布局 */
+    .box-6 {
+      display: grid;
+    }
+    .box-6 .item {
+      width: 100px;
+      height: 50px;
+      align-self: center;
+      justify-self: center;
+    }
+
+    /* table-cell */
+    .box-7 {
+      width: 1000px;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+    .box-7 .item {
+      display: inline-block;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>行内元素 line-height = height</h1>
+  <div class="box box-1">
+    <span>Content</span>
+  </div>
+
+  <h1>absolute + margin</h1>
+  <div class="box box-2">
+    <div class="item">Content</div>
+  </div>
+
+  <h1>absolute + transform</h1>
+  <div class="box box-3">
+    <div class="item">Content</div>
+  </div>
+
+  <h1>absolute + margin: auto</h1>
+  <div class="box box-4">
+    <div class="item">Content</div>
+  </div>
+
+  <h1>flex布局</h1>
+  <div class="box box-5">
+    <div class="item">Content</div>
+  </div>
+
+  <h1>grid布局</h1>
+  <div class="box box-6">
+    <div class="item">Content</div>
+  </div>
+
+  <h1>table-cell</h1>
+  <div class="box box-7">
+    <div class="item">Content</div>
+  </div>
+
+</body>
+</html>
